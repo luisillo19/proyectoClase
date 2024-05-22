@@ -8,8 +8,8 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+    font-family: "";
+    src: url("") format("woff2"), url("") format("woff");
 }
 
 /* ******************************** */
@@ -17,3 +17,48 @@
 /* Colores */
 
 /* ******************************** */
+
+:root {
+    --size-container: 1366px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main__container {
+    max-width: var(--size-container);
+    gap: 1.25rem;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      "restaurant-tres restaurant-tres restaurant-dos restaurant-dos"
+      "restaurant-tres restaurant-tres restaurant-uno restaurant-uno"
+      "restaurant-cinco restaurant-cinco restaurant-cuatro restaurant-cuatro"
+      "restaurant-seis restaurant-seis restaurant-cuatro restaurant-cuatro";
+}
+
+.restaurant-uno { grid-area: restaurant-uno; }
+.restaurant-dos { grid-area: restaurant-dos; }
+.restaurant-tres { grid-area: restaurant-tres; }
+.restaurant-cuatro { grid-area: restaurant-cuatro; }
+.restaurant-cinco { grid-area: restaurant-cinco; }
+.restaurant-seis { grid-area: restaurant-seis; }
+
+.container__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.container__img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    border: 3px solid #ead03f;
+}
